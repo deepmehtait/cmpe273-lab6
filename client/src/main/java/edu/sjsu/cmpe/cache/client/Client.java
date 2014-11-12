@@ -38,11 +38,13 @@ public class Client {
         Cluster.add(new DistributedCacheService("http://localhost:3000"));
         Cluster.add(new DistributedCacheService("http://localhost:3001"));
         Cluster.add(new DistributedCacheService("http://localhost:3002"));
+        System.out.println("---- Inserting ----");
         for (int putkey = 1; putkey <= 10; putkey++) {
             int key = Hashing.consistentHash(Hashing.md5().hashString(Integer.toString(putkey)), Cluster.size());
             Cluster.get(key).put(putkey, Character.toString(value[putkey]));
             System.out.println("The key value pair " + putkey + "-" + value[putkey] + " is assigned to server " + key);
         }
+        System.out.println("---- Retriving ----");
         for (int getkey = 1; getkey <= 10; getkey++) {
             int key2 = Hashing.consistentHash(Hashing.md5().hashString(Integer.toString(getkey)), Cluster.size());
             System.out.println("The key value pair " + getkey + "-" + Cluster.get(key2).get(getkey) + " is received to server " + key2);
