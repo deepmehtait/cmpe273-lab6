@@ -1,4 +1,4 @@
-cmpe273-lab6
+Consistent Hashing Ring POC(Proof of Concept)
 ============
 The goal of this program is to learn how consistent hashing works by implementing a proof of concept (POC) client-side sharding, aka consistent hash ring.
 
