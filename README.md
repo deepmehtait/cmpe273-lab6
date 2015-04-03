@@ -2,7 +2,7 @@ Consistent Hashing Ring POC(Proof of Concept)
 ============
 The goal of this program is to learn how consistent hashing works by implementing a proof of concept (POC) client-side sharding, aka consistent hash ring.
 
-Steps
+##Steps
 
 The baseline code has two modules--client and server--and you can be running three server instances (A, B, and C) and one client that talks to the servers. You won’t be making any changes to the server module, but all consistent hashing implementation should be on the client side only.
 
