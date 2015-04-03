@@ -20,7 +20,7 @@ C: http://localhost:3002
 
 3. From the client, PUT this below sequence of key-value pairs into the three cache servers and check each server at http://localhost:300{0|1|2}/cache/ to make sure data is sharded across three servers.
 
-    {Key => Value}
+    ```{Key => Value}
     1 => a
     2 => b
     3 => c
@@ -31,5 +31,6 @@ C: http://localhost:3002
     8 => h
     9 => i
     10 => j
+    ```
 
 4. Finally, retrieve all keys, 1 to 10, via GET(x) and print out their values to the console.
